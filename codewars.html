@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var countBits = function(n) {
+  //statement to prevent negative integer
+  // function which will convert decimal number to binary.(.toString)
+      //the string returned should be converted to an array by spread method
+      //array elements resulted should be numbers by map
+       //array elements should be summed up by reduce
+  //sum should be returned
+  if (n<0){
+    return;
+  }
+  else{
+    const binaryStr=n.toString(2);
+  
+    var binaryStrArray=[...binaryStr].map(Number);
+    const sumOfBinary=binaryStrArray.reduce(function(acc,cur){
+return  acc+=cur;
+},0)
+    return  sumOfBinary;
+    }
+    
+
+}
+
+  console.log(countBits(1234));
+  
+    </script>
+</body>
+</html>
