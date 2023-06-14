@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sortByLength (array) {
+  
+            // Return an array containing the same strings, ordered from shortest to longest
+            var arraySort=array.sort(function(a,b){
+                return a.length-b.length;
+            })
+            return  arraySort;
+        
+        };
+        console.log(sortByLength (["Telescopes", "Glasses", "Eyes", "Monocles"]))
+    </script>
+</body>
+</html>
