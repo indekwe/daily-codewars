@@ -12,8 +12,8 @@
         //function that will create prime factors and return them in array form
         //function must do factorization by dividing number by factors starting from 2
             //firstly we should check whether 2 is the factor to n by dividing n/2(achieved by creating a loop)
-            //secondly we should check whether the remaining number or n is not divisible by odd number greater than 2 but less than to squareroot of n(achived by creating a loop with different statement checking different odd numbers)
-            //thirdly if the n is not divisible by 2 or any odd number less than its squareroot, it should be prime factor to itself
+            //secondly we should check whether the remaining number or n is not divisible by odd number greater than 2(achived by creating a loop with different statement checking different odd numbers)
+            //thirdly if the n is not divisible by 2 or any odd number less than itself, it should be prime factor to itself
         //all the prime factor should be inserted into an array (achieved by push)
         let primeFactorss=[];
         while(n % 2=== 0){
@@ -30,9 +30,7 @@
                 primeFactor+=2;
             }
         }
-        //if(n>2){
-           // primeFactorss.push(n);
-        //}
+        
         return primeFactorss;
     }
     console.log(primeFactors(129));
