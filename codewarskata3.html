@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function primeFactors(n) {
+        //function that will create prime factors and return them in array form
+        //function must do factorization by dividing number by factors starting from 2
+            //firstly we should check whether 2 is the factor to n by dividing n/2(achieved by creating a loop)
+            //secondly we should check whether the remaining number or n is not divisible by odd number greater than 2 but less than to squareroot of n(achived by creating a loop with different statement checking different odd numbers)
+            //thirdly if the n is not divisible by 2 or any odd number less than its squareroot, it should be prime factor to itself
+        //all the prime factor should be inserted into an array (achieved by push)
+        let primeFactorss=[];
+        while(n % 2=== 0){
+            primeFactorss.push(2);
+            n/=2
+        };
+        let primeFactor=3;
+        while(primeFactor<=n){
+            if(n%primeFactor===0){
+                primeFactorss.push(primeFactor);
+                n/=primeFactor;
+            }
+            else  {
+                primeFactor+=2;
+            }
+        }
+        //if(n>2){
+           // primeFactorss.push(n);
+        //}
+        return primeFactorss;
+    }
+    console.log(primeFactors(129));
+    </script>
+</body>
+</html>
